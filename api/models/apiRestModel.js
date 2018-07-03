@@ -2,22 +2,21 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-
 var TaskSchema = new Schema({
   name: {
     type: String,
-    required: 'Kindly enter the name of the task'
+    required: 'Es requerido que ingrese un nombre al nuevo objeto'
   },
   Created_date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   status: {
     type: [{
       type: String,
-      enum: ['pending', 'ongoing', 'completed']
+      enum: ['Pendiente', 'En tiempo', 'Completado']
     }],
-    default: ['pending']
+    default: ['Pendiente']
   }
 });
 

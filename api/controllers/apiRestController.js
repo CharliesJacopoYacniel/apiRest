@@ -1,5 +1,4 @@
 'use strict';
-
 var mongoose = require('mongoose'),
   Task = mongoose.model('Tasks');
 
@@ -37,7 +36,7 @@ exports.update_a_task = function(req, res) {
 };
 
 exports.delete_a_task = function(req, res) {
-    
+
   Task.remove({
     _id: req.params.taskId
   }, function(err, task) {
